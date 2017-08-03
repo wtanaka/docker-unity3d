@@ -6,3 +6,4 @@ RUN apt-get install -qq -y gconf-service lib32gcc1 lib32stdc++6 libasound2 libc6
 # ADD unity-editor_amd64-2017.1.0xf3Linux.deb .
 RUN wget http://beta.unity3d.com/download/061bcf22327f/unity-editor_amd64-2017.1.0xf3Linux.deb
 RUN dpkg -i unity-editor_amd64-2017.1.0xf3Linux.deb
+RUN rm unity-editor_amd64-2017.1.0xf3Linux.deb
