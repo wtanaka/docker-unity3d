@@ -22,9 +22,7 @@ docker build -t gableroux/unity3d:latest .
 
 ### Run the image
 
-```bash
-docker run -it gableroux/unity3d xvfb-run --server-args="-screen 0 1024x768x24" /opt/Unity/Editor/Unity -projectPath $(pwd) -batchmode -runEditorTests -force-opengl -logFile
-```
+todo
 
 ### Publish the image to a registry
 
