@@ -44,7 +44,8 @@ RUN apt-get update -qq; \
   libpq5 \
   xvfb \
   wget \
-
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 # ADD unity-editor_amd64-2017.1.0xf3Linux.deb .
 RUN wget -nv http://beta.unity3d.com/download/061bcf22327f/unity-editor_amd64-2017.1.0xf3Linux.deb; \
@@ -53,3 +54,6 @@ RUN wget -nv http://beta.unity3d.com/download/061bcf22327f/unity-editor_amd64-20
   mkdir -p $HOME/.local/share/unity3d/Certificates/
 
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
+
+# Clean up
+RUN rm -rf /tmp/* /var/tmp/*
