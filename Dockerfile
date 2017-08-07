@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:16.4
 
 RUN apt-get update -qq; \
   apt-get install -qq -y \
