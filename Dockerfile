@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+ARG DEB_FILE
+ARG DOWNLOAD_URL
+
 RUN apt-get update -qq; \
   apt-get install -qq -y \
   gconf-service \
@@ -47,10 +50,9 @@ RUN apt-get update -qq; \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# ADD unity-editor_amd64-2017.1.0xf3Linux.deb .
-RUN wget -nv http://beta.unity3d.com/download/fd37f3680b5f/unity-editor_amd64-2017.2.0b11.deb; \
-  dpkg -i unity-editor_amd64-2017.2.0b11.deb; \
-  rm unity-editor_amd64-2017.2.0b11.deb; \
+RUN wget -nv ${DOWNLOAD_URL}; \
+  dpkg -i ${DEB_FILE}; \
+  rm ${DEB_FILE}; \
   mkdir -p $HOME/.local/share/unity3d/Certificates/
 
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
