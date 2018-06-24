@@ -42,7 +42,7 @@ before_script:
   variables:
     VERSION: 5.1.0
     BUILD: f3
-    TAG: 5.1.0f3+2015082501_amd64
+    TAG: 5.1.0f3_2015082501_amd64
     DEB_FILE: unity-editor-5.1.0f3+2015082501_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/$DEB_FILE
 
@@ -58,7 +58,7 @@ build-master unity_5_1_0f3_2015082501_amd64:
   variables:
     VERSION: 5.1.0
     BUILD: f3
-    TAG: 5.1.0f3+2015090301_amd64
+    TAG: 5.1.0f3_2015090301_amd64
     DEB_FILE: unity-editor-5.1.0f3+2015090301_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/$DEB_FILE
 
@@ -74,7 +74,7 @@ build-master unity_5_1_0f3_2015090301_amd64:
   variables:
     VERSION: 5.1.0
     BUILD: f3
-    TAG: 5.1.0f3+2015091601_amd64
+    TAG: 5.1.0f3_2015091601_amd64
     DEB_FILE: unity-editor-5.1.0f3+2015091601_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/$DEB_FILE
 
@@ -90,7 +90,7 @@ build-master unity_5_1_0f3_2015091601_amd64:
   variables:
     VERSION: 5.2.2
     BUILD: f1
-    TAG: 5.2.2f1+20151018_amd64
+    TAG: 5.2.2f1_20151018_amd64
     DEB_FILE: unity-editor-5.2.2f1+20151018_amd64.deb
     DOWNLOAD_URL: http://files.unity3d.com/levi/$DEB_FILE
 
@@ -106,7 +106,7 @@ build-master unity_5_2_2f1_20151018_amd64:
   variables:
     VERSION: 5.3.0
     BUILD: f4
-    TAG: 5.3.0f4+20151218_amd64
+    TAG: 5.3.0f4_20151218_amd64
     DEB_FILE: unity-editor-5.3.0f4+20151218_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -122,7 +122,7 @@ build-master unity_5_3_0f4_20151218_amd64:
   variables:
     VERSION: 5.3.1
     BUILD: f1
-    TAG: 5.3.1f1+20160106_amd64
+    TAG: 5.3.1f1_20160106_amd64
     DEB_FILE: unity-editor-5.3.1f1+20160106_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -138,7 +138,7 @@ build-master unity_5_3_1f1_20160106_amd64:
   variables:
     VERSION: 5.3.2
     BUILD: f1
-    TAG: 5.3.2f1+20160208_amd64
+    TAG: 5.3.2f1_20160208_amd64
     DEB_FILE: unity-editor-5.3.2f1+20160208_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -154,7 +154,7 @@ build-master unity_5_3_2f1_20160208_amd64:
   variables:
     VERSION: 5.3.3
     BUILD: f1
-    TAG: 5.3.3f1+20160223_amd64
+    TAG: 5.3.3f1_20160223_amd64
     DEB_FILE: unity-editor-5.3.3f1+20160223_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -170,7 +170,7 @@ build-master unity_5_3_3f1_20160223_amd64:
   variables:
     VERSION: 5.3.4
     BUILD: f1
-    TAG: 5.3.4f1+20160316_amd64
+    TAG: 5.3.4f1_20160316_amd64
     DEB_FILE: unity-editor-5.3.4f1+20160316_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -186,7 +186,7 @@ build-master unity_5_3_4f1_20160316_amd64:
   variables:
     VERSION: 5.3.4
     BUILD: f1
-    TAG: 5.3.4f1+20160317_amd64
+    TAG: 5.3.4f1_20160317_amd64
     DEB_FILE: unity-editor-5.3.4f1+20160317_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -202,7 +202,7 @@ build-master unity_5_3_4f1_20160317_amd64:
   variables:
     VERSION: 5.3.4
     BUILD: f1
-    TAG: 5.3.4f1+20160503_amd64
+    TAG: 5.3.4f1_20160503_amd64
     DEB_FILE: unity-editor-5.3.4f1+20160503_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -218,7 +218,7 @@ build-master unity_5_3_4f1_20160503_amd64:
   variables:
     VERSION: 5.3.5
     BUILD: f1
-    TAG: 5.3.5f1+20160525_amd64
+    TAG: 5.3.5f1_20160525_amd64
     DEB_FILE: unity-editor-5.3.5f1+20160525_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -234,7 +234,7 @@ build-master unity_5_3_5f1_20160525_amd64:
   variables:
     VERSION: 5.3.6
     BUILD: f1
-    TAG: 5.3.6f1+20160720_amd64
+    TAG: 5.3.6f1_20160720_amd64
     DEB_FILE: unity-editor-5.3.6f1+20160720_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -250,7 +250,7 @@ build-master unity_5_3_6f1_20160720_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b10
-    TAG: 5.4.0b10+20160316_amd64
+    TAG: 5.4.0b10_20160316_amd64
     DEB_FILE: unity-editor-5.4.0b10+20160316_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -266,7 +266,7 @@ build-master unity_5_4_0b10_20160316_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b10
-    TAG: 5.4.0b10+20160317_amd64
+    TAG: 5.4.0b10_20160317_amd64
     DEB_FILE: unity-editor-5.4.0b10+20160317_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -282,7 +282,7 @@ build-master unity_5_4_0b10_20160317_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b13
-    TAG: 5.4.0b13+20160406_amd64
+    TAG: 5.4.0b13_20160406_amd64
     DEB_FILE: unity-editor-5.4.0b13+20160406_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -298,7 +298,7 @@ build-master unity_5_4_0b13_20160406_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b15
-    TAG: 5.4.0b15+20160418_amd64
+    TAG: 5.4.0b15_20160418_amd64
     DEB_FILE: unity-editor-5.4.0b15+20160418_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -314,7 +314,7 @@ build-master unity_5_4_0b15_20160418_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b16
-    TAG: 5.4.0b16+20160503_amd64
+    TAG: 5.4.0b16_20160503_amd64
     DEB_FILE: unity-editor-5.4.0b16+20160503_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -330,7 +330,7 @@ build-master unity_5_4_0b16_20160503_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b18
-    TAG: 5.4.0b18+20160524_amd64
+    TAG: 5.4.0b18_20160524_amd64
     DEB_FILE: unity-editor-5.4.0b18+20160524_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -346,7 +346,7 @@ build-master unity_5_4_0b18_20160524_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b21
-    TAG: 5.4.0b21+20160609_amd64
+    TAG: 5.4.0b21_20160609_amd64
     DEB_FILE: unity-editor-5.4.0b21+20160609_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -362,7 +362,7 @@ build-master unity_5_4_0b21_20160609_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: b23
-    TAG: 5.4.0b23+20160628_amd64
+    TAG: 5.4.0b23_20160628_amd64
     DEB_FILE: unity-editor-5.4.0b23+20160628_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -378,7 +378,7 @@ build-master unity_5_4_0b23_20160628_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: f1
-    TAG: 5.4.0f1+20160715_amd64
+    TAG: 5.4.0f1_20160715_amd64
     DEB_FILE: unity-editor-5.4.0f1+20160715_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -394,7 +394,7 @@ build-master unity_5_4_0f1_20160715_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: f3
-    TAG: 5.4.0f3+20160727_amd64
+    TAG: 5.4.0f3_20160727_amd64
     DEB_FILE: unity-editor-5.4.0f3+20160727_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -410,7 +410,7 @@ build-master unity_5_4_0f3_20160727_amd64:
   variables:
     VERSION: 5.4.0
     BUILD: p1
-    TAG: 5.4.0p1+20160810_amd64
+    TAG: 5.4.0p1_20160810_amd64
     DEB_FILE: unity-editor-5.4.0p1+20160810_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -426,7 +426,7 @@ build-master unity_5_4_0p1_20160810_amd64:
   variables:
     VERSION: 5.4.1
     BUILD: f1
-    TAG: 5.4.1f1+20160913_amd64
+    TAG: 5.4.1f1_20160913_amd64
     DEB_FILE: unity-editor-5.4.1f1+20160913_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -442,7 +442,7 @@ build-master unity_5_4_1f1_20160913_amd64:
   variables:
     VERSION: 5.4.2
     BUILD: f2
-    TAG: 5.4.2f2+20161111_amd64
+    TAG: 5.4.2f2_20161111_amd64
     DEB_FILE: unity-editor-5.4.2f2+20161111_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -456,9 +456,9 @@ build-master unity_5_4_2f2_20161111_amd64:
 
 .unity_5_4_3f1-3_20161125_amd64: &unity_5_4_3f1-3_20161125_amd64
   variables:
-    VERSION: 5.4.3f1-
-    BUILD: 3
-    TAG: 5.4.3f1-3+20161125_amd64
+    VERSION: 5.4.3
+    BUILD: f1-3
+    TAG: 5.4.3f1-3_20161125_amd64
     DEB_FILE: unity-editor-5.4.3f1-3+20161125_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -474,7 +474,7 @@ build-master unity_5_4_3f1-3_20161125_amd64:
   variables:
     VERSION: 5.5.0
     BUILD: b1
-    TAG: 5.5.0b1+20160830_amd64
+    TAG: 5.5.0b1_20160830_amd64
     DEB_FILE: unity-editor-5.5.0b1+20160830_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -490,7 +490,7 @@ build-master unity_5_5_0b1_20160830_amd64:
   variables:
     VERSION: 5.5.0
     BUILD: b2
-    TAG: 5.5.0b2+20160906_amd64
+    TAG: 5.5.0b2_20160906_amd64
     DEB_FILE: unity-editor-5.5.0b2+20160906_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -506,7 +506,7 @@ build-master unity_5_5_0b2_20160906_amd64:
   variables:
     VERSION: 5.5.0
     BUILD: b5
-    TAG: 5.5.0b5+20160927_amd64
+    TAG: 5.5.0b5_20160927_amd64
     DEB_FILE: unity-editor-5.5.0b5+20160927_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
@@ -522,7 +522,7 @@ build-master unity_5_5_0b5_20160927_amd64:
   variables:
     VERSION: 5.5.0
     BUILD: f3
-    TAG: 5.5.0f3+20161125_amd64
+    TAG: 5.5.0f3_20161125_amd64
     DEB_FILE: unity-editor-5.5.0f3+20161125_amd64.deb
     DOWNLOAD_URL: http://download.unity3d.com/download_unity/linux/$DEB_FILE
 
