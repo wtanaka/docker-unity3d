@@ -787,6 +787,21 @@ build-master unity_2017_2_0b2:
   <<: *unity_2017_2_0b2
   <<: *build-master
 
+.unity_2017_2_0xb6Linux: &unity_2017_2_0xb6Linux
+  variables:
+    VERSION: 2017.2.0
+    BUILD: xb6Linux
+    TAG: 2017.2.0xb6Linux
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2b451a7da81d/unity-editor_amd64-2017.2.0xb6Linux.deb
+
+build unity_2017_2_0xb6Linux:
+  <<: *unity_2017_2_0xb6Linux
+  <<: *build
+
+build-master unity_2017_2_0xb6Linux:
+  <<: *unity_2017_2_0xb6Linux
+  <<: *build-master
+
 .unity_2017_1_0xf3Linux: &unity_2017_1_0xf3Linux
   variables:
     VERSION: 2017.1.0
