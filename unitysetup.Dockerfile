@@ -51,7 +51,7 @@ RUN apt-get update -qq; \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget -nv ${DOWNLOAD_URL} -O Unitysetup && \
+RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # make executable
     chmod +x UnitySetup && \
     # agree with license
