@@ -935,23 +935,6 @@ build-master unity_2017_2_1f1:
 
 # Installation changed in 2017.3 series
 # https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
-.unity_2018_1_5f1: &unity_2018_1_5f1
-  variables:
-    VERSION: 2018.1.5
-    BUILD: f1
-    TAG: 2018.1.5f1
-    UNITY_SETUP: UnitySetup-2018.1.5f1
-    DOWNLOAD_URL: https://beta.unity3d.com/download/2e0fa9ec2214/UnitySetup-2018.1.5f1
-
-build unity_2018_1_5f1:
-  <<: *unity_2018_1_5f1
-  <<: *build-unitysetup
-
-build-master unity_2018_1_5f1:
-  <<: *unity_2018_1_5f1
-  <<: *build-unitysetup-master
-
-
 .unity_2017_3_1f1: &unity_2017_3_1f1
   variables:
     VERSION: 2017.3.1
