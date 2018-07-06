@@ -25,6 +25,7 @@ RUN apt-get update -qq; \
   libglib2.0-0 \
   libglu1-mesa \
   libgtk2.0-0 \
+  libgtk3.0 \
   libnspr4 \
   libnss3 \
   libpango1.0-0 \
