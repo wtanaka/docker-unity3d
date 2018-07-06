@@ -62,7 +62,7 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     --install-location=/opt/Unity \
     --verbose \
     --download-location=/tmp/unity \
-    --components=Unity,Mac,Windows,WebGL && \
+    --components=All && \
     # remove setup
     rm UnitySetup && \
     # make a directory for the certificate Unity needs to run
