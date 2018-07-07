@@ -27,6 +27,9 @@ before_script:
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
   only:
     - master
+  tags:
+    - docker
+    - gce
 
 .build: &build
   stage: build
@@ -35,6 +38,9 @@ before_script:
     - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
   except:
     - master
+  tags:
+    - docker
+    - gce
 
 .build-unitysetup-master: &build-unitysetup-master
   stage: build
@@ -43,6 +49,9 @@ before_script:
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
   only:
     - master
+  tags:
+    - docker
+    - gce
 
 .build-unitysetup: &build-unitysetup
   stage: build
@@ -51,6 +60,9 @@ before_script:
     - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
   except:
     - master
+  tags:
+    - docker
+    - gce
 
 
 .unity_5_1_0f3_2015082501_amd64: &unity_5_1_0f3_2015082501_amd64
