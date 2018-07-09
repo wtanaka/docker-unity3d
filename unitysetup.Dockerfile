@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
 ARG DOWNLOAD_URL
+ARG COMPONENTS=Unity,Mac,Windows,Linux,WebGL
 
 RUN apt-get update -qq; \
   apt-get install -qq -y \
@@ -25,6 +26,7 @@ RUN apt-get update -qq; \
   libglib2.0-0 \
   libglu1-mesa \
   libgtk2.0-0 \
+  libgtk3.0 \
   libnspr4 \
   libnss3 \
   libpango1.0-0 \
@@ -61,7 +63,7 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     --install-location=/opt/Unity \
     --verbose \
     --download-location=/tmp/unity \
-    --components=Unity,Mac,Windows,WebGL && \
+    --components=$COMPONENTS && \
     # remove setup
     rm UnitySetup && \
     # make a directory for the certificate Unity needs to run
