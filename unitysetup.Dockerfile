@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
 ARG DOWNLOAD_URL
+ARG COMPONENTS=Unity,Windows-Mono,Mac-Mono,WebGL
 
 RUN apt-get update -qq; \
   apt-get install -qq -y \
@@ -8,6 +9,7 @@ RUN apt-get update -qq; \
   lib32gcc1 \
   lib32stdc++6 \
   libasound2 \
+  libarchive13 \
   libc6 \
   libc6-i386 \
   libcairo2 \
@@ -24,9 +26,11 @@ RUN apt-get update -qq; \
   libglib2.0-0 \
   libglu1-mesa \
   libgtk2.0-0 \
+  libgtk3.0 \
   libnspr4 \
   libnss3 \
   libpango1.0-0 \
+  libsoup2.4-1 \
   libstdc++6 \
   libx11-6 \
   libxcomposite1 \
@@ -49,12 +53,24 @@ RUN apt-get update -qq; \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget -nv ${DOWNLOAD_URL} -O unity.deb; \
-  dpkg -i unity.deb; \
-  rm unity.deb; \
-  mkdir -p $HOME/.local/share/unity3d/Certificates/
+RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
+    # make executable
+    chmod +x UnitySetup && \
+    # agree with license
+    echo y | \
+    # install unity with required components
+    ./UnitySetup --unattended \
+    --install-location=/opt/Unity \
+    --verbose \
+    --download-location=/tmp/unity \
+    --components=$COMPONENTS && \
+    # remove setup
+    rm UnitySetup && \
+    # make a directory for the certificate Unity needs to run
+    mkdir -p $HOME/.local/share/unity3d/Certificates/
 
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
 
 # Clean up
 RUN rm -rf /tmp/* /var/tmp/*
+
