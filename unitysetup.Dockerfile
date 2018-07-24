@@ -56,8 +56,6 @@ RUN apt-get update -qq; \
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # make executable
     chmod +x UnitySetup && \
-    # list available components for current build
-    ./UnitySetup --list-components | true && \
     # agree with license
     echo y | \
     # install unity with required components
