@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 ARG DOWNLOAD_URL
-ARG COMPONENTS=Unity,Windows-Mono,Mac-Mono,WebGL
+ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
 
 RUN apt-get update -qq; \
   apt-get install -qq -y \
