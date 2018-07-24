@@ -971,7 +971,7 @@ build-master unity_2017_3_1f1-unity:
     VERSION: 2017.3.1
     BUILD: f1
     TAG: 2017.3.1f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd+/UnitySetup-2017.3.1f1
 
 build unity_2017_3_1f1-windows:
@@ -987,7 +987,7 @@ build-master unity_2017_3_1f1-windows:
     VERSION: 2017.3.1
     BUILD: f1
     TAG: 2017.3.1f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd+/UnitySetup-2017.3.1f1
 
 build unity_2017_3_1f1-mac:
@@ -1098,7 +1098,7 @@ build-master unity_2017_4_0f1-unity:
     VERSION: 2017.4.0
     BUILD: f1
     TAG: 2017.4.0f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/0ec691fce5c2/UnitySetup-2017.4.0f1
 
 build unity_2017_4_0f1-windows:
@@ -1114,7 +1114,7 @@ build-master unity_2017_4_0f1-windows:
     VERSION: 2017.4.0
     BUILD: f1
     TAG: 2017.4.0f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/0ec691fce5c2/UnitySetup-2017.4.0f1
 
 build unity_2017_4_0f1-mac:
@@ -1225,7 +1225,7 @@ build-master unity_2017_4_2f2-unity:
     VERSION: 2017.4.2
     BUILD: f2
     TAG: 2017.4.2f2-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/79b540374219/UnitySetup-2017.4.2f2
 
 build unity_2017_4_2f2-windows:
@@ -1241,7 +1241,7 @@ build-master unity_2017_4_2f2-windows:
     VERSION: 2017.4.2
     BUILD: f2
     TAG: 2017.4.2f2-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/79b540374219/UnitySetup-2017.4.2f2
 
 build unity_2017_4_2f2-mac:
@@ -1351,7 +1351,7 @@ build-master unity_2017_4_4f1-unity:
     VERSION: 2017.4.4
     BUILD: f1
     TAG: 2017.4.4f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/e685bfa3c483/UnitySetup-2017.4.4f1
 
 build unity_2017_4_4f1-windows:
@@ -1367,7 +1367,7 @@ build-master unity_2017_4_4f1-windows:
     VERSION: 2017.4.4
     BUILD: f1
     TAG: 2017.4.4f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/e685bfa3c483/UnitySetup-2017.4.4f1
 
 build unity_2017_4_4f1-mac:
@@ -1478,7 +1478,7 @@ build-master unity_2017_4_6f1-unity:
     VERSION: 2017.4.6
     BUILD: f1
     TAG: 2017.4.6f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/fbeab28dc46b/UnitySetup-2017.4.6f1
 
 build unity_2017_4_6f1-windows:
@@ -1494,7 +1494,7 @@ build-master unity_2017_4_6f1-windows:
     VERSION: 2017.4.6
     BUILD: f1
     TAG: 2017.4.6f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/fbeab28dc46b/UnitySetup-2017.4.6f1
 
 build unity_2017_4_6f1-mac:
@@ -1605,7 +1605,7 @@ build-master unity_2018_1_0b8-unity:
     VERSION: 2018.1.0
     BUILD: b8
     TAG: 2018.1.0b8-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/ee2fb9f9da52/UnitySetup-2018.1.0b8
 
 build unity_2018_1_0b8-windows:
@@ -1621,7 +1621,7 @@ build-master unity_2018_1_0b8-windows:
     VERSION: 2018.1.0
     BUILD: b8
     TAG: 2018.1.0b8-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/ee2fb9f9da52/UnitySetup-2018.1.0b8
 
 build unity_2018_1_0b8-mac:
@@ -1733,7 +1733,7 @@ build-master unity_2018_1_0b13-unity:
     VERSION: 2018.1.0b
     BUILD: 13
     TAG: 2018.1.0b13-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/77a142ac9989/UnitySetup-2018.1.0b13
 
 build unity_2018_1_0b13-windows:
@@ -1749,7 +1749,7 @@ build-master unity_2018_1_0b13-windows:
     VERSION: 2018.1.0b
     BUILD: 13
     TAG: 2018.1.0b13-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/77a142ac9989/UnitySetup-2018.1.0b13
 
 build unity_2018_1_0b13-mac:
@@ -1860,7 +1860,7 @@ build-master unity_2018_1_0f2-unity:
     VERSION: 2018.1.0
     BUILD: f2
     TAG: 2018.1.0f2-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/170f0691b973/UnitySetup-2018.1.0f2
 
 build unity_2018_1_0f2-windows:
@@ -1876,7 +1876,7 @@ build-master unity_2018_1_0f2-windows:
     VERSION: 2018.1.0
     BUILD: f2
     TAG: 2018.1.0f2-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/170f0691b973/UnitySetup-2018.1.0f2
 
 build unity_2018_1_0f2-mac:
@@ -1987,7 +1987,7 @@ build-master unity_2018_1_2f1-unity:
     VERSION: 2018.1.2
     BUILD: f1
     TAG: 2018.1.2f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/3709a3f954c1/UnitySetup-2018.1.2f1
 
 build unity_2018_1_2f1-windows:
@@ -2003,7 +2003,7 @@ build-master unity_2018_1_2f1-windows:
     VERSION: 2018.1.2
     BUILD: f1
     TAG: 2018.1.2f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/3709a3f954c1/UnitySetup-2018.1.2f1
 
 build unity_2018_1_2f1-mac:
@@ -2114,7 +2114,7 @@ build-master unity_2018_1_3f1-unity:
     VERSION: 2018.1.3
     BUILD: f1
     TAG: 2018.1.3f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/093b6115f8df/UnitySetup-2018.1.3f1
 
 build unity_2018_1_3f1-windows:
@@ -2130,7 +2130,7 @@ build-master unity_2018_1_3f1-windows:
     VERSION: 2018.1.3
     BUILD: f1
     TAG: 2018.1.3f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/093b6115f8df/UnitySetup-2018.1.3f1
 
 build unity_2018_1_3f1-mac:
@@ -2241,7 +2241,7 @@ build-master unity_2018_1_5f1-unity:
     VERSION: 2018.1.5
     BUILD: f1
     TAG: 2018.1.5f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/2e0fa9ec2214/UnitySetup-2018.1.5f1
 
 build unity_2018_1_5f1-windows:
@@ -2257,7 +2257,7 @@ build-master unity_2018_1_5f1-windows:
     VERSION: 2018.1.5
     BUILD: f1
     TAG: 2018.1.5f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/2e0fa9ec2214/UnitySetup-2018.1.5f1
 
 build unity_2018_1_5f1-mac:
@@ -2369,7 +2369,7 @@ build-master unity_2018_1_6f1-unity:
     VERSION: 2018.1.6
     BUILD: f1
     TAG: 2018.1.6f1-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/a68afd074ea7/UnitySetup-2018.1.6f1
 
 build unity_2018_1_6f1-windows:
@@ -2385,7 +2385,7 @@ build-master unity_2018_1_6f1-windows:
     VERSION: 2018.1.6
     BUILD: f1
     TAG: 2018.1.6f1-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/a68afd074ea7/UnitySetup-2018.1.6f1
 
 build unity_2018_1_6f1-mac:
@@ -2495,7 +2495,7 @@ build-master unity_2018_2_0b2-unity:
     VERSION: 2018.2.0
     BUILD: b2
     TAG: 2018.2.0b2-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/7b8938f7fa83/UnitySetup-2018.2.0b2
 
 build unity_2018_2_0b2-windows:
@@ -2511,7 +2511,7 @@ build-master unity_2018_2_0b2-windows:
     VERSION: 2018.2.0
     BUILD: b2
     TAG: 2018.2.0b2-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/7b8938f7fa83/UnitySetup-2018.2.0b2
 
 build unity_2018_2_0b2-mac:
@@ -2622,7 +2622,7 @@ build-master unity_2018_2_0b5-unity:
     VERSION: 2018.2.0
     BUILD: b5
     TAG: 2018.2.0b5-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/05c26644dc98/UnitySetup-2018.2.0b5
 
 build unity_2018_2_0b5-windows:
@@ -2638,7 +2638,7 @@ build-master unity_2018_2_0b5-windows:
     VERSION: 2018.2.0
     BUILD: b5
     TAG: 2018.2.0b5-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/05c26644dc98/UnitySetup-2018.2.0b5
 
 build unity_2018_2_0b5-mac:
@@ -2749,7 +2749,7 @@ build-master unity_2018_2_0b7-unity:
     VERSION: 2018.2.0
     BUILD: b7
     TAG: 2018.2.0b7-windows
-    COMPONENTS: Windows-Mono
+    COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/6c38f70ea123/UnitySetup-2018.2.0b7
 
 build unity_2018_2_0b7-windows:
@@ -2765,7 +2765,7 @@ build-master unity_2018_2_0b7-windows:
     VERSION: 2018.2.0
     BUILD: b7
     TAG: 2018.2.0b7-mac
-    COMPONENTS: Mac-Mono
+    COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/6c38f70ea123/UnitySetup-2018.2.0b7
 
 build unity_2018_2_0b7-mac:
