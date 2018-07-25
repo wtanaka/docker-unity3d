@@ -27,7 +27,7 @@ before_script:
   script:
     - docker build $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
-  retry: 3
+  retry: 2
   only:
     - master
 
@@ -36,7 +36,7 @@ before_script:
   script:
     - docker build $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
-  retry: 3
+  retry: 2
   except:
     - master
 
@@ -45,7 +45,7 @@ before_script:
   script:
     - docker build -f unitysetup.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
-  retry: 3
+  retry: 2
   only:
     - master
 
@@ -54,7 +54,7 @@ before_script:
   script:
     - docker build -f unitysetup.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
-  retry: 3
+  retry: 2
   except:
     - master
 
