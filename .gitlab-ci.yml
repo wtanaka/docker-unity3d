@@ -13,6 +13,7 @@ variables:
     --label com.gableroux.unity3d.download_url=$DOWNLOAD_URL
   IMAGE_ARGUMENTS: >
     --build-arg DOWNLOAD_URL=$DOWNLOAD_URL
+    --build-arg COMPONENTS=$COMPONENTS
 
 services:
   - docker:dind
