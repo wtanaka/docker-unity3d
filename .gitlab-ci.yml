@@ -1,6 +1,7 @@
 image: docker:latest
 
 variables:
+  COMPONENTS: Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
   IMAGE_LABELS: >
     --label vcs-url=$CI_PROJECT_URL
     --label com.gitlab.ci.builder=$GITLAB_USER_EMAIL
