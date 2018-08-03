@@ -2973,3 +2973,131 @@ build unity_2018_2_0f1-facebook:
 build-master unity_2018_2_0f1-facebook:
   <<: *unity_2018_2_0f1-facebook
   <<: *build-unitysetup-master
+
+
+.unity_2018_2_0f2: &unity_2018_2_0f2
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2:
+  <<: *unity_2018_2_0f2
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2:
+  <<: *unity_2018_2_0f2
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-unity: &unity_2018_2_0f2-unity
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-unity
+    COMPONENTS: Unity
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-unity:
+  <<: *unity_2018_2_0f2-unity
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-unity:
+  <<: *unity_2018_2_0f2-unity
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-windows: &unity_2018_2_0f2-windows
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-windows
+    COMPONENTS: Windows,Windows-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-windows:
+  <<: *unity_2018_2_0f2-windows
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-windows:
+  <<: *unity_2018_2_0f2-windows
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-mac: &unity_2018_2_0f2-mac
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-mac
+    COMPONENTS: Mac,Mac-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-mac:
+  <<: *unity_2018_2_0f2-mac
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-mac:
+  <<: *unity_2018_2_0f2-mac
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-ios: &unity_2018_2_0f2-ios
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-ios
+    COMPONENTS: iOS
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-ios:
+  <<: *unity_2018_2_0f2-ios
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-ios:
+  <<: *unity_2018_2_0f2-ios
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-android: &unity_2018_2_0f2-android
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-android:
+  <<: *unity_2018_2_0f2-android
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-android:
+  <<: *unity_2018_2_0f2-android
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-webgl: &unity_2018_2_0f2-webgl
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-webgl
+    COMPONENTS: WebGL
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-webgl:
+  <<: *unity_2018_2_0f2-webgl
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-webgl:
+  <<: *unity_2018_2_0f2-webgl
+  <<: *build-unitysetup-master
+
+.unity_2018_2_0f2-facebook: &unity_2018_2_0f2-facebook
+  variables:
+    VERSION: 2018.2.0
+    BUILD: f2
+    TAG: 2018.2.0f2-facebook
+    COMPONENTS: Facebook-Games
+    DOWNLOAD_URL: https://beta.unity3d.com/download/10189b18f56e/UnitySetup-2018.2.0f2
+
+build unity_2018_2_0f2-facebook:
+  <<: *unity_2018_2_0f2-facebook
+  <<: *build-unitysetup
+
+build-master unity_2018_2_0f2-facebook:
+  <<: *unity_2018_2_0f2-facebook
+  <<: *build-unitysetup-master
