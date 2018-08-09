@@ -1,0 +1,36 @@
+{% for version_key, version in versions.items() %}
+{# main build #}
+.unity_{{version.underscore}}: &unity_{{version.underscore}}
+  variables:
+    VERSION: {{version.version}}
+    BUILD: {{version.build}}
+    TAG: {{version_key}}
+    DOWNLOAD_URL: {{version.download_url}}
+
+build unity_{{version.underscore}}:
+  <<: *unity_{{version.underscore}}
+  <<: *build-unitysetup
+
+build-master unity_{{version.underscore}}:
+  <<: *unity_{{version.underscore}}
+  <<: *build-unitysetup-master
+
+{# component specific #}
+{%- for component_key, component in components.items() %}
+.unity_{{version.underscore}}-unity: &unity_{{version.underscore}}-{{component_key}}
+  variables:
+    VERSION: {{version.version}}
+    BUILD: {{version.build}}
+    TAG: {{version_key}}-{{component_key}}
+    COMPONENTS: {{component}}
+    DOWNLOAD_URL: {{version.download_url}}
+
+build unity_{{version.underscore}}-{{component_key}}:
+  <<: *unity_{{version.underscore}}-{{component_key}}
+  <<: *build-unitysetup
+
+build-master unity_{{version.underscore}}-{{component_key}}:
+  <<: *unity_{{version.underscore}}-{{component_key}}
+  <<: *build-unitysetup-master
+{% endfor %}
+{% endfor %}
