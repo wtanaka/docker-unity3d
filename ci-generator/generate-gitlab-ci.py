@@ -17,29 +17,35 @@ def main():
     }
     # todo: make this more DRY by extracting a version to an object to compute underscore value
     versions = {
-        '2017.4.7f1': {
-            'version': '2017.4.7',
+        # '2017.4.7f1': {
+        #     'version': '2017.4.7',
+        #     'build': 'f1',
+        #     'underscore': '2017_4_7f1',
+        #     'download_url': 'https://beta.unity3d.com/download/1d86eef80e0a/UnitySetup-2017.4.7f1'
+        # },
+        # '2017.4.8f1': {
+        #     'version': '2017.4.8',
+        #     'build': 'f1',
+        #     'underscore': '2017_4_8f1',
+        #     'download_url': 'https://beta.unity3d.com/download/8140fe378247/UnitySetup-2017.4.8f1'
+        # },
+        # '2018.2.1f1': {
+        #     'version': '2018.2.1',
+        #     'build': 'f1',
+        #     'underscore': '2018_2_1f1',
+        #     'download_url': 'https://beta.unity3d.com/download/48afb4a72b1a/UnitySetup-2018.2.1f1'
+        # },
+        # '2018.2.2f1': {
+        #     'version': '2018.2.2',
+        #     'build': 'f1',
+        #     'underscore': '2018_2_2f1',
+        #     'download_url': 'https://beta.unity3d.com/download/fcee59332301/UnitySetup-2018.2.2f1'
+        # }
+        '2018.2.3f1': {
+            'version': '2018.2.3',
             'build': 'f1',
-            'underscore': '2017_4_7f1',
-            'download_url': 'https://beta.unity3d.com/download/1d86eef80e0a/UnitySetup-2017.4.7f1'
-        },
-        '2017.4.8f1': {
-            'version': '2017.4.8',
-            'build': 'f1',
-            'underscore': '2017_4_8f1',
-            'download_url': 'https://beta.unity3d.com/download/8140fe378247/UnitySetup-2017.4.8f1'
-        },
-        '2018.2.1f1': {
-            'version': '2018.2.1',
-            'build': 'f1',
-            'underscore': '2018_2_1f1',
-            'download_url': 'https://beta.unity3d.com/download/48afb4a72b1a/UnitySetup-2018.2.1f1'
-        },
-        '2018.2.2f1': {
-            'version': '2018.2.2',
-            'build': 'f1',
-            'underscore': '2018_2_2f1',
-            'download_url': 'https://beta.unity3d.com/download/fcee59332301/UnitySetup-2018.2.2f1'
+            'underscore': '2018_2_3f1',
+            'download_url': 'https://beta.unity3d.com/download/fba045906327/UnitySetup-2018.2.3f1'
         }
     }
     context = {
