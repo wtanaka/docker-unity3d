@@ -41,11 +41,31 @@ def main():
         #     'underscore': '2018_2_2f1',
         #     'download_url': 'https://beta.unity3d.com/download/fcee59332301/UnitySetup-2018.2.2f1'
         # }
-        '2018.2.3f1': {
-            'version': '2018.2.3',
+        # '2018.2.3f1': {
+        #     'version': '2018.2.3',
+        #     'build': 'f1',
+        #     'underscore': '2018_2_3f1',
+        #     'download_url': 'https://beta.unity3d.com/download/fba045906327/UnitySetup-2018.2.3f1'
+        # }
+        '2017.4.9f1': {
+            'version': '2017.4.9',
             'build': 'f1',
-            'underscore': '2018_2_3f1',
-            'download_url': 'https://beta.unity3d.com/download/fba045906327/UnitySetup-2018.2.3f1'
+            'underscore': '2017_4_9f1',
+            'download_url': 'https://beta.unity3d.com/download/cc814e4d942d/UnitySetup-2017.4.9f1',
+            # todo: do something with the sha1
+            'sha1': '6d4284af0002b3f06a6923649d57ffd045999756',
+            'release_notes': 'https://unity3d.com/unity/whatsnew/unity-2017.4.9',
+            'release_url': 'https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3599057'
+        },
+        '2018.2.4f1': {
+            'version': '2018.2.4',
+            'build': 'f1',
+            'underscore': '2018_2_4f1',
+            'download_url': 'https://beta.unity3d.com/download/fe703c5165de/UnitySetup-2018.2.4f1',
+            # todo: do something with the sha1
+            'sha1': 'a1c6cca4876703bcfd4f8465e7def36a15804158',
+            'release_notes': 'https://unity3d.com/unity/whatsnew/unity-2018.2.4',
+            'release_url': 'https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3603070'
         }
     }
     context = {
