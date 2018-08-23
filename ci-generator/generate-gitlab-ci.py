@@ -8,12 +8,12 @@ def main():
     yaml_template = os.path.join(script_dirname, "gitlab-ci.jinja2")
     components = {
         'unity': 'Unity',
-        'windows': 'Windows,Windows-Mono',
-        'mac': 'Mac,Mac-Mono',
-        'ios': 'iOS',
-        'android': 'Android',
-        'webgl': 'WebGL',
-        'facebook': 'Facebook-Games'
+        'windows': 'Unity,Windows,Windows-Mono',
+        'mac': 'Unity,Mac,Mac-Mono',
+        'ios': 'Unity,iOS',
+        'android': 'Unity,Android',
+        'webgl': 'Unity,WebGL',
+        'facebook': 'Unity,Facebook-Games'
     }
     # todo: make this more DRY by extracting a version to an object to compute underscore value
     versions = {
