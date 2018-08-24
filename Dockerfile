@@ -50,9 +50,14 @@ RUN apt-get update -qq; \
   && rm -rf /var/lib/apt/lists/*
 
 RUN wget -nv ${DOWNLOAD_URL} -O unity.deb; \
-  dpkg -i unity.deb; \
-  rm unity.deb; \
-  mkdir -p $HOME/.local/share/unity3d/Certificates/
+    # compare sha1 if given
+    if [[ -z "${SHA1}" ]]; then echo "${SHA1}  unity.deb" | shasum -a 1 --check -; fi && \
+    # install unity
+    dpkg -i unity.deb && \
+    # remove setup
+    rm unity.deb && \
+    # make a directory for the certificate Unity needs to run
+    mkdir -p $HOME/.local/share/unity3d/Certificates/
 
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
 

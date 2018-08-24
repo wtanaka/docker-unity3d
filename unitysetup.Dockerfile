@@ -54,6 +54,8 @@ RUN apt-get update -qq; \
   && rm -rf /var/lib/apt/lists/*
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
+    # compare sha1 if given
+    if [[ -z "${SHA1}" ]]; then echo "${SHA1}  UnitySetup" | shasum -a 1 --check -; fi && \
     # make executable
     chmod +x UnitySetup && \
     # agree with license
