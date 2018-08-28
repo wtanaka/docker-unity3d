@@ -33,12 +33,12 @@ def get_unity_versions():
 def get_unity_components():
     return {
         'unity': 'Unity',
-        'windows': 'Windows,Windows-Mono',
-        'mac': 'Mac,Mac-Mono',
-        'ios': 'iOS',
-        'android': 'Android',
-        'webgl': 'WebGL',
-        'facebook': 'Facebook-Games'
+        'windows': 'Unity,Windows,Windows-Mono',
+        'mac': 'Unity,Mac,Mac-Mono',
+        'ios': 'Unity,iOS',
+        'android': 'Unity,Android',
+        'webgl': 'Unity,WebGL',
+        'facebook': 'Unity,Facebook-Games'
     }
 
 
