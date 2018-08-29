@@ -49,6 +49,12 @@ before_script:
   script:
     - docker build -f unitysetup.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
+    - |
+      if [ -z "$LATEST" ]; then
+        echo "Marking $CI_REGISTRY_IMAGE:$TAG as latest image"
+        docker tag "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
+        docker push "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
+      fi
   retry: 2
   only:
     - master
@@ -65,11 +71,12 @@ before_script:
   variables:
     VERSION: 2017.4.10
     BUILD: f1
-    TAG: 2017.4.10f1-
+    TAG: 2017.4.10f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/14396d76537e/UnitySetup-2017.4.10f1
     SHA1: d2870fa14ffa529d4f0679698597bd5e3764c218
     RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.4.10
     RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3612628
+    
 
 build unity_2017_4_10f1:
   <<: *unity_2017_4_10f1
@@ -218,11 +225,12 @@ build-master unity_2017_4_10f1-facebook:
   variables:
     VERSION: 2018.2.5
     BUILD: f1
-    TAG: 2018.2.5f1-
+    TAG: 2018.2.5f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/88f43da96871/UnitySetup-2018.2.5f1
     SHA1: 2f1d98a40a6662fb7f1f722b311350b506fb931f
     RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.5
     RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3612631
+    LATEST: true
 
 build unity_2018_2_5f1:
   <<: *unity_2018_2_5f1
