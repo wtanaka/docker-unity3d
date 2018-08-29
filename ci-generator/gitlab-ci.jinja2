@@ -67,7 +67,7 @@ before_script:
   variables:
     VERSION: {{version.version}}
     BUILD: {{version.build}}
-    TAG: {{version_key}}-{{component_key}}
+    TAG: {{version_key}}
     DOWNLOAD_URL: {{version.download_url}}
     {% if version.sha1 %}SHA1: {{version.sha1}}{% endif %}
     {% if version.release_notes %}RELEASE_NOTES: {{version.release_notes}}{% endif %}
