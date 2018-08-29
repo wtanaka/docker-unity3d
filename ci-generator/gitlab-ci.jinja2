@@ -52,7 +52,7 @@ before_script:
       if [ -n "$LATEST" ]; then
         echo "Marking $CI_REGISTRY_IMAGE:$TAG as latest image"
         docker tag "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
-        docker push "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
+        docker push "$CI_REGISTRY_IMAGE:latest"
       fi
   retry: 2
   only:
