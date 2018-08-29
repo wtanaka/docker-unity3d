@@ -1,0 +1,15 @@
+{
+  "name": "clean-registry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docker-hub-api": "^0.6.0",
+    "dotenv": "^6.0.0"
+  }
+}
