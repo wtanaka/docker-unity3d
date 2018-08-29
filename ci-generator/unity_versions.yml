@@ -811,6 +811,7 @@
   release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3612628
 
 2018.2.5f1:
+  latest: true
   version: 2018.2.5
   build: f1
   underscore: 2018_2_5f1
