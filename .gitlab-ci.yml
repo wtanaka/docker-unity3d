@@ -50,7 +50,7 @@ before_script:
     - docker build -f unitysetup.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
     - |
-      if [ -z "$LATEST" ]; then
+      if [ -n "$LATEST" ]; then
         echo "Marking $CI_REGISTRY_IMAGE:$TAG as latest image"
         docker tag "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
         docker push "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
@@ -5508,7 +5508,7 @@ build-master unity_2017_4_10f1-facebook:
     SHA1: 2f1d98a40a6662fb7f1f722b311350b506fb931f
     RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.5
     RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3612631
-    LATEST: true
+    LATEST: 1
 
 build unity_2018_2_5f1:
   <<: *unity_2018_2_5f1

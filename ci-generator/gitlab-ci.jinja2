@@ -49,7 +49,7 @@ before_script:
     - docker build -f unitysetup.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
     - |
-      if [ -z "$LATEST" ]; then
+      if [ -n "$LATEST" ]; then
         echo "Marking $CI_REGISTRY_IMAGE:$TAG as latest image"
         docker tag "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
         docker push "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
@@ -78,7 +78,7 @@ before_script:
     {% if version.sha1 %}SHA1: {{version.sha1}}{% endif %}
     {% if version.release_notes %}RELEASE_NOTES: {{version.release_notes}}{% endif %}
     {% if version.release_url %}RELEASE_URL: {{version.release_url}}{% endif %}
-    {% if version.latest %}LATEST: true{% endif %}
+    {% if version.latest %}LATEST: 1{% endif %}
 
 build unity_{{version.underscore}}:
   <<: *unity_{{version.underscore}}
