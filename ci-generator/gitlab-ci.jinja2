@@ -67,6 +67,12 @@ before_script:
   except:
     - master
 
+{%- if not versions.items() %}
+nothing_to_build:
+  stage: build
+  script:
+    echo 'All versions are already built, skipping'
+{%- else %}
 {%- for version_key, version in versions.items() %}
 {#- main build #}
 .unity_{{version.underscore}}: &unity_{{version.underscore}}
@@ -116,3 +122,4 @@ build-master unity_{{version.underscore}}-{{component_key}}:
 {% endfor %}
 {% endif %}
 {% endfor %}
+{% endif %}

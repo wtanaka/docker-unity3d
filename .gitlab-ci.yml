@@ -67,3 +67,7 @@ before_script:
   retry: 2
   except:
     - master
+nothing_to_build:
+  stage: build
+  script:
+    echo 'All versions are already built, skipping'
