@@ -12,7 +12,7 @@ def main():
 
 def get_rendered_ci_template():
     context = {
-        'versions': get_unity_versions(),
+        'versions': get_unity_versions() or {},
         'components': get_unity_components()
     }
     return render_template(get_ci_yaml_template(), context)

@@ -818,13 +818,14 @@
 #  sha1: 2f1d98a40a6662fb7f1f722b311350b506fb931f
 #  release_notes: https://unity3d.com/unity/whatsnew/unity-2018.2.5
 #  release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3612631
+#
+#2018.2.6f1:
+#  latest: true
+#  version: 2018.2.6
+#  build: f1
+#  underscore: 2018_2_6f1
+#  download_url: https://beta.unity3d.com/download/793261fe3e9a/UnitySetup-2018.2.6f1
+#  sha1: 0358da6c5dcd1746de4ac293ffc405cb455b1493
+#  release_notes: https://unity3d.com/unity/whatsnew/unity-2018.2.6
+#  release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3633370
 
-2018.2.6f1:
-  latest: true
-  version: 2018.2.6
-  build: f1
-  underscore: 2018_2_6f1
-  download_url: https://beta.unity3d.com/download/793261fe3e9a/UnitySetup-2018.2.6f1
-  sha1: 0358da6c5dcd1746de4ac293ffc405cb455b1493
-  release_notes: https://unity3d.com/unity/whatsnew/unity-2018.2.6
-  release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3633370
