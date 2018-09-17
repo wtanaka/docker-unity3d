@@ -67,156 +67,156 @@ before_script:
   retry: 2
   except:
     - master
-.unity_2018_2_7f1: &unity_2018_2_7f1
+.unity_2017_3_0b1: &unity_2017_3_0b1
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
-    LATEST: 1
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
+    
 
-build unity_2018_2_7f1:
-  <<: *unity_2018_2_7f1
+build unity_2017_3_0b1:
+  <<: *unity_2017_3_0b1
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1:
-  <<: *unity_2018_2_7f1
+build-master unity_2017_3_0b1:
+  <<: *unity_2017_3_0b1
   <<: *build-unitysetup-master
   
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-unity
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-unity
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-unity
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-unity
     COMPONENTS: Unity
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-unity:
-  <<: *unity_2018_2_7f1-unity
+build unity_2017_3_0b1-unity:
+  <<: *unity_2017_3_0b1-unity
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-unity:
-  <<: *unity_2018_2_7f1-unity
+build-master unity_2017_3_0b1-unity:
+  <<: *unity_2017_3_0b1-unity
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-windows
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-windows
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-windows
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-windows
     COMPONENTS: Unity,Windows,Windows-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-windows:
-  <<: *unity_2018_2_7f1-windows
+build unity_2017_3_0b1-windows:
+  <<: *unity_2017_3_0b1-windows
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-windows:
-  <<: *unity_2018_2_7f1-windows
+build-master unity_2017_3_0b1-windows:
+  <<: *unity_2017_3_0b1-windows
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-mac
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-mac
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-mac
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-mac
     COMPONENTS: Unity,Mac,Mac-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-mac:
-  <<: *unity_2018_2_7f1-mac
+build unity_2017_3_0b1-mac:
+  <<: *unity_2017_3_0b1-mac
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-mac:
-  <<: *unity_2018_2_7f1-mac
+build-master unity_2017_3_0b1-mac:
+  <<: *unity_2017_3_0b1-mac
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-ios
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-ios
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-ios
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-ios
     COMPONENTS: Unity,iOS
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-ios:
-  <<: *unity_2018_2_7f1-ios
+build unity_2017_3_0b1-ios:
+  <<: *unity_2017_3_0b1-ios
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-ios:
-  <<: *unity_2018_2_7f1-ios
+build-master unity_2017_3_0b1-ios:
+  <<: *unity_2017_3_0b1-ios
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-android
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-android
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-android
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-android
     COMPONENTS: Unity,Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-android:
-  <<: *unity_2018_2_7f1-android
+build unity_2017_3_0b1-android:
+  <<: *unity_2017_3_0b1-android
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-android:
-  <<: *unity_2018_2_7f1-android
+build-master unity_2017_3_0b1-android:
+  <<: *unity_2017_3_0b1-android
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-webgl
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-webgl
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-webgl
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-webgl
     COMPONENTS: Unity,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-webgl:
-  <<: *unity_2018_2_7f1-webgl
+build unity_2017_3_0b1-webgl:
+  <<: *unity_2017_3_0b1-webgl
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-webgl:
-  <<: *unity_2018_2_7f1-webgl
+build-master unity_2017_3_0b1-webgl:
+  <<: *unity_2017_3_0b1-webgl
   <<: *build-unitysetup-master
 
-.unity_2018_2_7f1-unity: &unity_2018_2_7f1-facebook
+.unity_2017_3_0b1-unity: &unity_2017_3_0b1-facebook
   variables:
-    VERSION: 2018.2.7
-    BUILD: f1
-    TAG: 2018.2.7f1-facebook
+    VERSION: 2017.3.0
+    BUILD: b1
+    TAG: 2017.3.0b1-facebook
     COMPONENTS: Unity,Facebook-Games
-    DOWNLOAD_URL: https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
-    SHA1: 13c24c5268a1a97e1e212321dc47a8890f0934ca
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2018.2.7
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3662605
+    DOWNLOAD_URL: http://beta.unity3d.com/download/2ca68d182788/UnitySetup-2017.3.0b1
+    SHA1: 2c7e3358f4833070ac5266b0abc90aea8f4875c8
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0b1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3234332
 
-build unity_2018_2_7f1-facebook:
-  <<: *unity_2018_2_7f1-facebook
+build unity_2017_3_0b1-facebook:
+  <<: *unity_2017_3_0b1-facebook
   <<: *build-unitysetup
 
-build-master unity_2018_2_7f1-facebook:
-  <<: *unity_2018_2_7f1-facebook
+build-master unity_2017_3_0b1-facebook:
+  <<: *unity_2017_3_0b1-facebook
   <<: *build-unitysetup-master
 
 
