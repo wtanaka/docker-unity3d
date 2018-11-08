@@ -1,6 +1,10 @@
 # Unity3d docker image
 
-[![pipeline status](https://gitlab.com/gableroux/unity3d/badges/master/pipeline.svg)](https://gitlab.com/gableroux/unity3d/commits/master) [![Docker Stars](https://img.shields.io/docker/stars/gableroux/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/) [![Docker Pulls](https://img.shields.io/docker/pulls/gableroux/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/) [![Docker Automated build](https://img.shields.io/docker/automated/gableroux/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/) [![Image](https://images.microbadger.com/badges/image/gableroux/unity3d.svg)](https://microbadger.com/images/gableroux/unity3d) [![Version](https://images.microbadger.com/badges/version/gableroux/unity3d.svg)](https://microbadger.com/images/gableroux/unity3d)
+[![Docker Stars](https://img.shields.io/docker/stars/wtanaka/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/wtanaka/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/)
+[![Docker Automated build](https://img.shields.io/docker/automated/wtanaka/unity3d.svg)](https://hub.docker.com/r/wtanaka/unity3d/)
+[![Image](https://images.microbadger.com/badges/image/wtanaka/unity3d.svg)](https://microbadger.com/images/wtanaka/unity3d)
+[![Version](https://images.microbadger.com/badges/version/wtanaka/unity3d.svg)](https://microbadger.com/images/wtanaka/unity3d)
 
 ## About this image
 
