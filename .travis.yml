@@ -1,0 +1,14 @@
+services:
+- docker
+script:
+- docker build -t wtanaka/unity3d .
+after_success:
+- >
+  curl -H "Content-Type: application/json"
+  --data '{"source_type": "Branch", "source_name": "master"}'
+  -X POST
+  https://registry.hub.docker.com/u/wtanaka/unity3d/trigger/7636f409-d5db-4555-beff-263c2fe9cc22/
+notifications:
+  email:
+    recipients:
+      secure: HMMA1Z/ZrjxYiHczmADSutICRFeg15/NegiM6IwgocMBg/QnwLWtdKmMaIk8J1Vu4375hF/1eKoWr24W3fVue4fDgauW3EwZ/ttHwf+Hl1+P4xZH3Is49K2y2ws4PcJh6PRNOKCARxS6ZL5XZbFWLKIk4dgojHjS/1DKjsw3C7kFBIyeZ4bBenIwTS20A9XIcbkjObWIngVpACHB7Zl8PaIFDDol8D1qBdMJ9t78eQU4EcmpoQxZ+ASFCRxDRfqt08LsHNqFoj/ctbK4i0d08piAE2QPkL+wmgE9Ojfn06qTliuz0/YkEI3zgcLG3tOtCjbqU0wpeenE5l9nCXONPqzRI1H/1PQzOpTXnTZmV7saBtoj3HWu6FikfsCQAVE8hLcC6z1bLuQoyIp2ol6OCM8rkm8Hg6Ls8QXz8DTUbUyhXMn9OGr6cnAgol9+UA+l8vuTk0Hel2SFmWN12sXCuCKTHPYFdlRV89s7n5MnRoz4RvqrLKO3/o0ijI0fXVxeYvm+EZjwShQSAI7VE0Ldfw1/XnCaFpdJ9KjlxOFU5JmynkPDDLUhdnZ3s3QcT0uqU5YtQQrPD4YkGnsUdojan6NancAqK8pxrBlJFI1u8qKbnxTX3RKK06XYgv5BF3x+d/eUH9dSr0NyjBLoOV2K2yZ6zcVodIMfCQsqRqBSOao=
