@@ -7,7 +7,7 @@ after_success:
   curl -H "Content-Type: application/json"
   --data '{"source_type": "Branch", "source_name": "master"}'
   -X POST
-  https://registry.hub.docker.com/u/wtanaka/unity3d/trigger/7636f409-d5db-4555-beff-263c2fe9cc22/
+  https://registry.hub.docker.com/u/wtanaka/unity3d/trigger/e1a3dd98-f279-4d97-bf5b-ed093c7e427c/
 notifications:
   email:
     recipients:
