@@ -1,7 +1,7 @@
 # Unity3d docker image
 
-[![Docker Stars](https://img.shields.io/docker/stars/wtanaka/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/wtanaka/unity3d.svg)](https://hub.docker.com/r/gableroux/unity3d/)
+[![Docker Stars](https://img.shields.io/docker/stars/wtanaka/unity3d.svg)](https://hub.docker.com/r/wtanaka/unity3d/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/wtanaka/unity3d.svg)](https://hub.docker.com/r/wtanaka/unity3d/)
 [![Docker Automated build](https://img.shields.io/docker/automated/wtanaka/unity3d.svg)](https://hub.docker.com/r/wtanaka/unity3d/)
 [![Image](https://images.microbadger.com/badges/image/wtanaka/unity3d.svg)](https://microbadger.com/images/wtanaka/unity3d)
 [![Version](https://images.microbadger.com/badges/version/wtanaka/unity3d.svg)](https://microbadger.com/images/wtanaka/unity3d)
@@ -21,7 +21,7 @@ This docker image runs in a terminal so you don't have access to the UI. This do
 ### Build the image
 
 ```bash
-docker build -t gableroux/unity3d:latest .
+docker build -t wtanaka/unity3d:latest .
 ```
 
 ### Run the image
@@ -29,7 +29,7 @@ docker build -t gableroux/unity3d:latest .
 ```bash
 docker run -it --rm \
   -v "$(pwd):/root/project" \
-  gableroux/unity3d:latest \
+  wtanaka/unity3d:latest \
   xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
   /opt/Unity/Editor/Unity -projectPath /root/project
 ```
