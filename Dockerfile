@@ -63,7 +63,7 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
       echo "no sha1 given, skipping checksum"; \
     fi && \
     # install unity
-    ./UnitySetup --unattended \
+    yes | ./UnitySetup --unattended \
         --components=Unity,WebGL \
         -l /usr/local && \
     # remove setup
