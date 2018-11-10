@@ -65,7 +65,7 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
     # install unity
     yes | ./UnitySetup --unattended \
         --components=Unity,WebGL \
-        -l /usr/local && \
+        -l /opt/Unity && \
     # remove setup
     rm UnitySetup && \
     # make a directory for the certificate Unity needs to run

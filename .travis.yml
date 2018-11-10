@@ -2,6 +2,7 @@ services:
 - docker
 script:
 - docker build -t wtanaka/unity3d .
+- 'docker run wtanaka/unity3d sh -c "command -v /opt/Unity/Editor/Unity"'
 after_success:
 - >
   curl -H "Content-Type: application/json"
