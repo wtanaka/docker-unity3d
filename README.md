@@ -8,25 +8,44 @@
 
 ## About this image
 
-This docker image was first based on [GitLab CI with Unity3D in Docker](https://www.projects.science.uu.nl/DGKVj16/blog/gitlab-ci-with-unity3d-in-docker/) but changed a lot.
+This docker image was first based on [GitLab CI with Unity3D in
+Docker](https://www.projects.science.uu.nl/DGKVj16/blog/gitlab-ci-with-unity3d-in-docker/)
+and [Unity3d docker image for running commands in a CI such as
+gitlab-ci](https://gitlab.com/gableroux/unity3d).
 
-Linux Unity3d builds are taken from [Unity on Linux: Release Notes and Known Issues](https://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/) and all supported versions can be found in [`ci-generator/unity_versions.yml`](ci-generator/unity_versions.yml)
+Linux Unity3d builds are taken from [Unity on Linux: Release Notes and
+Known
+Issues](https://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/)
 
 ## Things to consider
 
-This docker image runs in a terminal so you don't have access to the UI. This docker image is intended to run unity commands with the **command line**. You can use it for running **tests** and **creating builds**.
+This docker image runs in a terminal so you don't have access to the
+UI. This docker image is intended to run unity commands with the
+**command line**. You can use it for running **tests** and **creating
+builds**.
 
 ## Usage
 
 ### Build the image
 
 ```bash
-docker build -t wtanaka/unity3d:latest .
+docker build -t wtanaka/unity3d .
 ```
 
 ### Run the image
 
 ```bash
+docker run --rm \
+-e "HOSTUID=`id -u`" \
+-e "HOSTGID=`id -g`" \
+-v "`pwd`:/work" \
+wtanaka/unity3d:2018.2.7f1 \
+xvfb-run --auto-servernum \
+--server-args='-screen 0 640x480x24' \
+/opt/Unity/Editor/Unity \
+-projectPath /work
+```
+
 docker run -it --rm \
   -v "$(pwd):/root/project" \
   wtanaka/unity3d:latest \
