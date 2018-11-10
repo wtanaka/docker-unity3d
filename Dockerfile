@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM wtanaka/xenial-uid
 
 ARG DOWNLOAD_URL=https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1
 ARG SHA1=13c24c5268a1a97e1e212321dc47a8890f0934ca
@@ -63,8 +63,26 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
       echo "no sha1 given, skipping checksum"; \
     fi && \
     # install unity
-    yes | ./UnitySetup --unattended \
-        --components=Unity,WebGL \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=Unity \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=Android \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=iOS \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=Mac-Mono \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=WebGL \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=Windows-Mono \
+        -l /opt/Unity && \
+    yes | ./UnitySetup --verbose --unattended \
+        --components=Facebook-Games \
         -l /opt/Unity && \
     # remove setup
     rm UnitySetup && \
