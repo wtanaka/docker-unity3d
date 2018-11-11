@@ -86,10 +86,11 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
         -l /opt/Unity && \
     # remove setup
     rm UnitySetup && \
+    rm -rf /tmp/* /var/tmp/* && \
     # make a directory for the certificate Unity needs to run
     mkdir -p $HOME/.local/share/unity3d/Certificates/
 
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
-
-# Clean up
-RUN rm -rf /tmp/* /var/tmp/*
+ADD combined_entry.sh /
+ADD write_license_file.sh /
+ENTRYPOINT ["/combined_entry.sh"]
