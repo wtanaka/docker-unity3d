@@ -3,6 +3,7 @@ services:
 script:
 - docker build -t wtanaka/unity3d .
 - 'docker run wtanaka/unity3d sh -c "command -v /opt/Unity/Editor/Unity"'
+- 'docker run -e FOOBAR=baz wtanaka/unity3d env | grep FOOBAR'
 after_success:
 - >
   curl -H "Content-Type: application/json"
