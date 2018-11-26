@@ -52,9 +52,8 @@ RUN apt-get update -qq; \
     xvfb \
     wget \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
+    && rm -rf /var/lib/apt/lists/* \
+    && wget -nv ${DOWNLOAD_URL} -O UnitySetup; \
     # compare sha1 if given
     chmod +x UnitySetup; \
     if [ -n "${SHA1}" -a "${SHA1}" != "" ]; then \
