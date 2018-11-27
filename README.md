@@ -8,9 +8,9 @@
 
 ## About this image
 
-This docker image was first based on [GitLab CI with Unity3D in
+This docker image was based on [GitLab CI with Unity3D in
 Docker](https://www.projects.science.uu.nl/DGKVj16/blog/gitlab-ci-with-unity3d-in-docker/)
-and [Unity3d docker image for running commands in a CI such as
+and [Unity3d docker image for running commands in CI such as
 gitlab-ci](https://gitlab.com/gableroux/unity3d).
 
 Linux Unity3d builds are taken from [Unity on Linux: Release Notes and
@@ -26,44 +26,47 @@ builds**.
 
 ## Usage
 
-### Build the image
+### Activate
+
+1. Pull the docker image and run it
 
 ```bash
-docker build -t wtanaka/unity3d .
-```
-
-### Run the image
-
-```bash
-docker run --rm \
--e "HOSTUID=`id -u`" \
--e "HOSTGID=`id -g`" \
--v "`pwd`:/work" \
-wtanaka/unity3d:2018.2.7f1 \
-xvfb-run --auto-servernum \
---server-args='-screen 0 640x480x24' \
-/opt/Unity/Editor/Unity \
--projectPath /work
-```
-
+UNITY_VERSION=2018.2.7f1
+UNITY_USERNAME=your_username@example.com
+UNITY_PASSWORD=yourPassword
 docker run -it --rm \
-  -v "$(pwd):/root/project" \
-  wtanaka/unity3d:latest \
-  xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
-  /opt/Unity/Editor/Unity -projectPath /root/project
+  -e "HOSTUID=`id -u`" \
+  -e "HOSTGID=`id -g`" \
+  -e "UNITY_USERNAME=$UNITY_USERNAME" \
+  -e "UNITY_PASSWORD=$UNITY_PASSWORD" \
+  -e "TEST_PLATFORM=linux" \
+  -e "WORKDIR=/work" \
+  -v "$(pwd):/work" \
+  wtanaka/unity3d:"$UNITY_VERSION" \
+  bash
 ```
 
-### Gitlab-CI
+2. Run this to try to activate Unity
 
-This docker image is intended to be used with [gitlab-ci](https://about.gitlab.com/features/gitlab-ci-cd/) (but may work with other CIs). An example project using unity3d in a docker image can be found at **[gableroux/unity3d-gitlab-ci-example](https://gitlab.com/gableroux/unity3d-gitlab-ci-example)**. Have a look to the `.gitlab-ci.yml`.
+```bash
+xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
+/opt/Unity/Editor/Unity \
+-logFile \
+-batchmode \
+-username "$UNITY_USERNAME" -password "$UNITY_PASSWORD"
+```
 
-## Shameless plug
+3. Wait for output that looks like this:
 
-I made this for free as a gift to the video game community. If this tool helped you, feel free to become a patron for [Totema Studio](https://totemastudio.com) on Patreon: :beers:
+```
+LICENSE SYSTEM [2017723 8:6:38] Posting <?xml version="1.0" encoding="UTF-8"?><root><SystemInfo><IsoCode>en</IsoCode><UserName>[...]
+```
 
-[![Totema Studio Logo](./doc/totema-studio-logo-217.png)](https://patreon.com/totemastudio)
-
-[![Become a Patron](./doc/become_a_patron_button.png)](https://www.patreon.com/bePatron?c=1073078)
+4. Copy xml content and save as `unity3d.alf`
+5. Open https://license.unity3d.com/manual and answer questions
+6. Upload `unity3d.alf` for manual activation
+7. Download `Unity_v2018.x.ulf`
+8. Copy the content of `Unity_v2018.x.ulf` license file to your CI's environment variable `UNITY_LICENSE_CONTENT`.
 
 ## License
 
