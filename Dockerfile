@@ -92,4 +92,6 @@ RUN apt-get update -qq; \
 ADD CACerts.pem $HOME/.local/share/unity3d/Certificates/
 ADD combined_entry.sh /
 ADD write_license_file.sh /
+ADD xvfb_build.sh /
+ADD xvfb_runtests.sh /
 ENTRYPOINT ["/combined_entry.sh"]
