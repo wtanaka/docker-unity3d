@@ -68,6 +68,69 @@ LICENSE SYSTEM [2017723 8:6:38] Posting <?xml version="1.0" encoding="UTF-8"?><r
 7. Download `Unity_v2018.x.ulf`
 8. Copy the content of `Unity_v2018.x.ulf` license file to your CI's environment variable `UNITY_LICENSE_CONTENT`.
 
+### Running play mode tests
+
+```
+UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
+export UNITY_LICENSE_CONTENT
+UNITY_VERSION=2018.2.7f1
+export UNITY_VERSION
+docker run -it --rm \
+  -e "HOSTUID=`id -u`" \
+  -e "HOSTGID=`id -g`" \
+  -e "TEST_PLATFORM=playmode" \
+  -e UNITY_LICENSE_CONTENT \
+  -e "WORKDIR=/work" \
+  -v "$(pwd):/work" \
+  wtanaka/unity3d:"$UNITY_VERSION" \
+  /xvfb_runtests.sh
+```
+
+### Running test mode tests
+
+```
+UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
+export UNITY_LICENSE_CONTENT
+UNITY_VERSION=2018.2.7f1
+export UNITY_VERSION
+docker run -it --rm \
+  -e "HOSTUID=`id -u`" \
+  -e "HOSTGID=`id -g`" \
+  -e "TEST_PLATFORM=playmode" \
+  -e UNITY_LICENSE_CONTENT \
+  -e "WORKDIR=/work" \
+  -v "$(pwd):/work" \
+  wtanaka/unity3d:"$UNITY_VERSION" \
+  /xvfb_runtests.sh
+```
+
+### Building
+
+```
+UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
+export UNITY_LICENSE_CONTENT
+UNITY_VERSION=2018.2.7f1
+export UNITY_VERSION
+docker run -it --rm \
+  -e "HOSTUID=`id -u`" \
+  -e "HOSTGID=`id -g`" \
+  -e "TEST_PLATFORM=playmode" \
+  -e UNITY_LICENSE_CONTENT \
+  -e "WORKDIR=/work" \
+  -v "$(pwd):/work" \
+  wtanaka/unity3d:"$UNITY_VERSION" \
+  /opt/Unity/Editor/Unity \
+  -projectPath . \
+  -quit -batchmode -nographics \
+  -buildTarget WebGL \
+  -customBuildTarget WebGL \
+  -customBuildName TheBuildName \
+  -customBuildPath TheBuild \
+  -customBuildOptions AcceptExternalModificationsToPlayer \
+  -executeMethod BuildCommand.PerformBuild \
+  -logFile
+```
+
 ## License
 
 [MIT](LICENSE.md) © [Gabriel Le Breton](https://gableroux.com)
