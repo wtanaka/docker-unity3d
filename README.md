@@ -31,7 +31,7 @@ builds**.
 1. Pull the docker image and run it
 
 ```bash
-UNITY_VERSION=2018.2.7f1
+UNITY_VERSION=2018.3.0f2
 UNITY_USERNAME=your_username@example.com
 UNITY_PASSWORD=yourPassword
 docker run -it --rm \
@@ -39,7 +39,6 @@ docker run -it --rm \
   -e "HOSTGID=`id -g`" \
   -e "UNITY_USERNAME=$UNITY_USERNAME" \
   -e "UNITY_PASSWORD=$UNITY_PASSWORD" \
-  -e "TEST_PLATFORM=linux" \
   -e "WORKDIR=/work" \
   -v "$(pwd):/work" \
   wtanaka/unity3d:"$UNITY_VERSION" \
@@ -73,7 +72,7 @@ LICENSE SYSTEM [2017723 8:6:38] Posting <?xml version="1.0" encoding="UTF-8"?><r
 ```
 UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
 export UNITY_LICENSE_CONTENT
-UNITY_VERSION=2018.2.7f1
+UNITY_VERSION=2018.3.0f2
 export UNITY_VERSION
 docker run -it --rm \
   -e "HOSTUID=`id -u`" \
@@ -86,12 +85,12 @@ docker run -it --rm \
   /xvfb_runtests.sh
 ```
 
-### Running test mode tests
+### Running edit mode tests
 
 ```
 UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
 export UNITY_LICENSE_CONTENT
-UNITY_VERSION=2018.2.7f1
+UNITY_VERSION=2018.3.0f2
 export UNITY_VERSION
 docker run -it --rm \
   -e "HOSTUID=`id -u`" \
@@ -109,7 +108,7 @@ docker run -it --rm \
 ```
 UNITY_LICENSE_CONTENT="`cat Unity_v2018.x.ulf`"
 export UNITY_LICENSE_CONTENT
-UNITY_VERSION=2018.2.7f1
+UNITY_VERSION=2018.3.0f2
 export UNITY_VERSION
 docker run -it --rm \
   -e "HOSTUID=`id -u`" \
