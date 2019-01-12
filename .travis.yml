@@ -3,6 +3,7 @@ services:
 env:
 - BUILD_DIR=.
 - BUILD_DIR=2018.3.0f2
+- BUILD_DIR=2018.2.7f1-android
 script:
 - docker build -t wtanaka/unity3d $BUILD_DIR
 - 'docker run wtanaka/unity3d sh -c "command -v /opt/Unity/Editor/Unity"'
