@@ -1,7 +1,10 @@
 services:
 - docker
+env:
+- BUILD_DIR=.
+- BUILD_DIR=2018.3.0f2
 script:
-- docker build -t wtanaka/unity3d .
+- docker build -t wtanaka/unity3d $BUILD_DIR
 - 'docker run wtanaka/unity3d sh -c "command -v /opt/Unity/Editor/Unity"'
 - 'docker run -e FOOBAR=baz wtanaka/unity3d env | grep FOOBAR'
 after_success:
