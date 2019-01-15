@@ -5,6 +5,7 @@ ARG SHA1=13c24c5268a1a97e1e212321dc47a8890f0934ca
 
 RUN apt-get update -qq; \
     apt-get install -qq -y \
+    ffmpeg \
     gconf-service \
     lib32gcc1 \
     lib32stdc++6 \
