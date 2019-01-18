@@ -95,7 +95,7 @@ export UNITY_VERSION
 docker run -it --rm \
   -e "HOSTUID=`id -u`" \
   -e "HOSTGID=`id -g`" \
-  -e "TEST_PLATFORM=playmode" \
+  -e "TEST_PLATFORM=editmode" \
   -e UNITY_LICENSE_CONTENT \
   -e "WORKDIR=/work" \
   -v "$(pwd):/work" \
